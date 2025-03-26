@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; }
+        .form-group { margin: 15px 0; }
+        label { display: inline-block; width: 100px; }
+        select, input { padding: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Enter Your Details</h2>
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" name="age" min="0" max="120" required>
+        </div>
+        <div class="form-group">
+            <label>Sex:</label>
+            <select name="sex" required>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>BMI:</label>
+            <input type="number" name="bmi" step="0.1" min="0" required>
+        </div>
+        <div class="form-group">
+            <label>Children:</label>
+            <input type="number" name="children" min="0" required>
+        </div>
+        <div class="form-group">
+            <label>Smoker:</label>
+            <select name="smoker" required>
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Region:</label>
+            <select name="region" required>
+                <option value="0">Southeast</option>
+                <option value="1">Southwest</option>
+                <option value="2">Northeast</option>
+                <option value="3">Northwest</option>
+            </select>
+        </div>
+        <button type="submit">Predict Cost</button>
+    </form>
+</body>
+</html>
